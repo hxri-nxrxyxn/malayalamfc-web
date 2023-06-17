@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
+
+@font-face {
+	font-family: GoogleSans-Regular;
+	src: url("fonts/GoogleSansDisplay-Regular.ttf");
+}
+
+@font-face {
+	font-family: GoogleSans-Display;
+	src: url("fonts/GoogleSansDisplay-Bold.ttf");
+}
+
+:root {
+	--color-bg: #d63031;
+	--color-primary: #dfe6e9;
+	--color-text-primary: #2d3436;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	font-family: "GoogleSans-Display";
+	background: repeating-linear-gradient(to right, white 0px, white 160px, #dfe6e9 160px, #dfe6e9 160.65px);
+}
+
+p {
+	color: var(--color-text-primary);
+}
+
+a {
+	text-decoration: none;
+	color: var(--color-text-primary);
+}
+
+section {
+	min-height: 30vh;
+}
+
+.button--main {
+	font-size: 0.7rem;
+	letter-spacing: 0.05rem;
+	text-decoration: underline;
+	text-underline-offset: 0.5rem;
+}
+
+.nav {
+	background-color: white;
+	padding: 0.7rem 2rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 999;
+}
+
+.nav__links a {
+	margin: auto 3rem;
+	font-size: 0.8rem;
+	letter-spacing: 0.1rem;
+}
+
+.nav__links a:hover {
+	color: red;
+}
+
+.nav__current-page {
+	color: red;
+}
+
+.header {
+	height: 70vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+		url("images/bg-1.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+}
+
+.header h1 {
+	margin: auto;
+	font-size: 5rem;
+	color: white;
+	letter-spacing: -0.3rem;
+}
+
+.news {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.news__starred {
+	display: flex;
+	flex-direction: column;
+	transform: translateY(-10vh);
+}
+
+.news__starred img {
+	width: 30vw;
+	height: 15rem;
+	object-fit: cover;
+}
+
+.news__stacked img {
+	width: 20vw;
+	height: 20vw;
+	object-fit: cover;
+}
+.news__contents {
+	background-color: white;
+	transform: translate(4rem, -4rem);
+	width: 80%;
+	padding: 2rem;	
+}
+
+.news__contents:hover h1 {
+	color: red;
+}
+.news__contents div {
+	display: flex;
+}
+
+.news__contents div p {
+	margin-bottom: 1rem;
+	font-family: 'GoogleSans-Regular';
+	font-size: 0.8rem;
+}
+.news__contents--date {
+	color: grey;
+	margin-right: 1rem;
+}	
+
+.news__contents--subtext {
+	color: red;
+}
+
+.news__contents h1 {
+	margin-bottom: 5rem;
+}
+
