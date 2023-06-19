@@ -51,7 +51,11 @@ section {
 }
 
 .nav {
+	border-bottom: 1px solid #dfe6e9;
 	background-color: white;
+	position: fixed;
+	top: 0;
+	width: 100vw;
 	padding: 0.7rem 2rem;
 	display: flex;
 	justify-content: space-between;
@@ -75,6 +79,7 @@ section {
 
 .header {
 	height: 70vh;
+	margin-top: 90px;
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
 		url("images/bg-1.jpg");
 	background-attachment: fixed;
@@ -98,6 +103,7 @@ section {
 
 .news__starred, .news__stacked {
 	display: flex;
+	width: 45%;
 	flex-direction: column;
 }
 
@@ -107,7 +113,7 @@ section {
 }
 
 .news__stacked {
-	transform: scale(0.8);
+	margin-top: 5rem;
 }
 
 .news__stack {
@@ -116,29 +122,39 @@ section {
 }
 
 .news__starred img {
-	width: 30vw;
-	height: 15rem;
+	width: 40vw;
+	height: 20rem;
 	object-fit: cover;
 }
 
 .news__stacked img {
-	width: 20vw;
-	height: 20vw;
+	width: 12rem;
+	height: 12rem;
 	object-fit: cover;
 }
 
 .news__starred .news__contents {
-	transform: translate(4rem, -4rem);
+	transform: translate(16rem, -8rem);
 	border: 1px solid #dfe6e9;
+	width: 50%;
 }
 
 .news__contents {
 	background-color: white;
 	width: 80%;
 	padding: 2rem;	
+	position: relative;
+}
+
+.news__contents h1 {
+	transition: all ease 0.7s;	
 }
 
 .news__contents:hover h1 {
+	color: red;
+}
+
+.news__stack:hover h1 {
 	color: red;
 }
 
@@ -160,7 +176,80 @@ section {
 	color: red;
 }
 
-.news__contents h1 {
-	margin-bottom: 5rem;
+.news__contents a {
+	position: absolute;
+	bottom: 0;
+	padding-bottom: inherit;
+	margin-top: 1rem;
 }
 
+.news__starred .news__contents h1 {
+	margin-bottom: 5rem;
+	line-height: 2.2rem;
+	font-size: 2rem;
+}
+
+.news__starred .news__contents a {
+	position: initial;
+}
+
+.news__stacked .news__contents h1 {
+	font-size: 1.2rem;
+}
+
+.something {
+	min-height: 80vh;
+	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/img-2.jpg');
+	background-size: cover;
+	border: 1px solid #dfe6e9;
+	margin: 5rem;
+	display: flex;
+}
+
+.something__box {
+	margin: auto;
+}
+.something__box h1 {
+	text-align: center;
+	color: white;
+	font-size: 5rem;
+}
+
+.something__box a {
+	color: white;
+}
+
+.staff {
+	display: flex;	
+	flex-direction: column;
+}
+
+.staff p {
+	color: grey ;
+	margin: 1rem;
+}
+
+.staff__row {
+	display: flex;
+	margin: 0 auto;
+}
+
+.staff__column {
+	padding: 2rem;
+	width: 8rem;
+	height: 8rem;
+	border: 1px solid #dfe6e9;
+	background-color: white;
+}
+
+.staff__column h1 {
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
+	line-height: 25px !important;
+}
+
+.staff__column p {
+	color: red;
+	font-size: 0.7rem;
+	margin: 0;
+}
