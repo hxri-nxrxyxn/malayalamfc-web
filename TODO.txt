@@ -1,0 +1,13 @@
+TODO
+
+AIM
+display club
+enroll more people
+
+TODO
+add ads
+fix footershit
+add footer
+add other pages
+perfect the ui
+fix weird font embedding on css

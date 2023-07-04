@@ -1,28 +1,38 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap");
 
 @font-face {
-	font-family: GoogleSans-Regular;
-	src: url("fonts/GoogleSans/GoogleSansDisplay-Regular.ttf");
-}
-
-@font-face {
-	font-family: GoogleSans-Display;
-	src: url("fonts/GoogleSans/GoogleSansDisplay-Bold.ttf");
-}
-
-@font-face {
-	font-family: AvantGardePro-Regular;
+	font-family: AGP-Medium;
 	src: url("fonts/AvantGardeGothicPro/ITCAvantGardePro-Md.otf");
 }
 
 @font-face {
-	font-family: AvantGardePro-Display;
+	font-family: AGP-Bold;
 	src: url("fonts/AvantGardeGothicPro/ITCAvantGardePro-Bold.otf");
 }
 
+@font-face {
+	font-family: AGP-Demi;
+	src: url("fonts/AvantGardeGothicPro/ITCAvantGardePro-Demi.otf");
+}
+
+@font-face {
+	font-family: AkkuratPro-Bold;
+	src: url("fonts/Akkurat/AkkuratPro-Bold.otf");
+}
+
+@font-face {
+	font-family: Akkurat-Regular;
+	src: url("fonts/Akkurat/Akkurat.ttf");
+}
 :root {
 	--color-border: #dfe6e9;
+	--color-border-light: #f6f6f6;
 	--color-primary: red;
+	--font-medium: 'AGP-Medium';
+	--font-bold: 'AGP-Bold';
+	--font-demi: 'AGP-Demi';
+	--font-sub: 'AkkuratPro-Bold';
+	--font-sub-regular: 'Akkurat-Regular'
 }
 
 * {
@@ -35,17 +45,16 @@ html {
 }
 
 body {
-	font-family: "AvantGardePro-Display";
 	background: repeating-linear-gradient(to right, white 0px, white 160px, var(--color-border) 160px, #dfe6e9 160.65px);
 }
 
 p {
-	color: var(--color-text-primary);
+	// bitch i dont know
 }
 
 a {
+	color: black;
 	text-decoration: none;
-	color: var(--color-text-primary);
 }
 
 section {
@@ -55,8 +64,7 @@ section {
 .button--main {
 	font-size: 0.7rem;
 	letter-spacing: 0.05rem;
-	text-decoration: underline;
-	text-underline-offset: 0.5rem;
+	font-family: var(--font-sub);
 }
 
 .nav {
@@ -73,13 +81,14 @@ section {
 }
 
 .nav__img img {
-	width: 40px;
+	width: 3rem;
 }
 
 .nav__links a {
 	margin: auto 3rem;
 	font-size: 0.7rem;
 	letter-spacing: 0.1rem;
+	font-family: var(--font-demi);
 }
 
 .nav__links a:hover {
@@ -106,6 +115,7 @@ section {
 	font-size: 5rem;
 	color: white;
 	letter-spacing: -0.3rem;
+	font-family: var(--font-bold);
 }
 
 .news {
@@ -116,13 +126,11 @@ section {
 
 .news__starred, .news__stacked {
 	display: flex;
-	width: 45%;
 	flex-direction: column;
 }
 
 .news__starred {
 	transform: translateY(-10vh);
-	max-width: 45%;
 }
 
 .news__stacked {
@@ -132,6 +140,11 @@ section {
 .news__stack {
 	display: flex;
 	border: 1px solid var(--color-border);
+	border-bottom: 0;
+}
+
+.news__stack:last-child {
+	border-bottom: 1px solid var(--color-border);
 }
 
 .news__starred img {
@@ -141,6 +154,7 @@ section {
 }
 
 .news__stacked img {
+	filter: brightness(70%);
 	width: 12rem;
 	height: 12rem;
 	object-fit: cover;
@@ -148,8 +162,7 @@ section {
 
 .news__starred .news__contents {
 	transform: translate(16rem, -8rem);
-	border: 1px solid var(--color-border);
-	width: 50%;
+	width: 40%;
 }
 
 .news__contents {
@@ -160,11 +173,19 @@ section {
 }
 
 .news__contents h1 {
-	transition: all ease 0.7s;	
+	font-family: var(--font-bold);
+}
+
+.news__contents {
+	transition: all ease 0.2s;	
 }
 
 .news__contents:hover h1 {
 	color: red;
+}
+
+.news__stack:hover .news__contents{
+	background-color: var(--color-border-light);
 }
 
 .news__stack:hover h1 {
@@ -177,8 +198,8 @@ section {
 
 .news__contents div p {
 	margin-bottom: 1rem;
-	font-family: 'AvantGardePro-Regular';
-	font-size: 0.8rem;
+	font-family: var(--font-sub-regular);
+	font-size: 0.7rem;
 }
 .news__contents--date {
 	color: grey;
@@ -198,8 +219,8 @@ section {
 
 .news__starred .news__contents h1 {
 	margin-bottom: 5rem;
-	line-height: 2.2rem;
-	font-size: 2rem;
+	line-height: 3.2rem;
+	font-size: 3rem;
 }
 
 .news__starred .news__contents a {
@@ -214,16 +235,19 @@ section {
 	display: flex;
 	flex-direction: column;
 	min-height: 80vh;
-	background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/img-2.jpg');
+	background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/banner.png');
 	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
 	border: 1px solid var(--color-border);
-	margin: 5rem;
+	margin: 5rem 10rem;
 }
 
 .something h1 {
-	text-align: center;
-	margin: auto;
+	font-family: var(--font-bold);
 	color: white;
+	width: 30%;
+	margin: auto 3rem;	
 	font-size: 5rem;
 }
 
@@ -237,7 +261,7 @@ section {
 }
 
 .staff {
-	margin: 5rem;
+	margin: 5rem 10rem;
 	display: flex;	
 	flex-direction: column;
 }
@@ -245,6 +269,7 @@ section {
 .staff p {
 	color: grey;
 	margin: 1rem;
+	font-family: var(--font-sub);
 }
 
 .staff__row {
@@ -259,15 +284,77 @@ section {
 	background-color: white;
 }
 
-.staff__column h1 {
+.staff__row .staff__column h1 {
 	margin-bottom: 1rem;
 	font-size: 1.5rem;
 	line-height: 25px !important;
+	font-family: var(--font-bold);
 }
 
-.staff__column p {
+.staff__row .staff__column p {
 	color: red;
+	font-family: var(--font-sub);
 	font-size: 0.7rem;
 	margin: 0;
 }
 
+.gallery {
+	margin: 0 10rem;
+	background-color: red;
+	height: 80vh;
+	display: flex;
+}
+
+.gallery__hero {
+}
+
+.ads {
+	display: flex;
+	margin: 15rem 10rem 0 10rem;
+	justify-content: space-between;
+}
+
+.ad__img {
+	background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/img-2.jpg');
+	background-size: stretch;
+	height: 70vh;
+}
+
+.ad--main {
+	width: 65%;
+	transform: translateY(-5rem);
+	display: flex;
+	flex-direction: column;
+}
+
+.ad--sub {
+	width: 30%;
+}
+
+.ad--main .ad__img {
+	background-position: left;
+}
+
+.ad--sub .ad__img {
+	background-position: 90% 50%;
+}
+
+.ad__contents {
+	background-color: white;
+	padding: 2rem;
+	transform: translate(50%, -50%);
+	width: 60%;
+}
+
+.ad__contents h1 {
+	font-family: var(--font-bold);
+	font-size: 2.5rem;
+	line-height: 2.5rem;
+}
+
+.ad__contents p {
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	color: grey;
+	font-family: var(--font-sub-regular);
+	width: 70%;
