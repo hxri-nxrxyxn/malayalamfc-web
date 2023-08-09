@@ -1,13 +1,9 @@
-TODO
-
 AIM
-display club
+display club - almost
 enroll more people
 
 TODO
-add ads
-fix footershit
-add footer
-add other pages
-perfect the ui
-fix weird font embedding on css
+perfect the ui - almost
+
+PROGRESS
+https://volleyball.ca/en/about/history
