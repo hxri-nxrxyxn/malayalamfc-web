@@ -345,9 +345,10 @@ section {
 }
 
 .ad__img {
-	background:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/img-2.jpg');
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/img-2.jpg');
 	background-size: stretch;
 	height: 70vh;
+	
 }
 
 .ad--main {
