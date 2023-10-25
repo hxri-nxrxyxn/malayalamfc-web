@@ -90,7 +90,13 @@ section {
 }
 
 .navm {
+	width: 0;
+	height: 0;
+	display: none;
 	visibility: none;
+}
+.navm * {
+	display: none;
 }
 .nav {
 	border-bottom: 1px solid var(--color-border);
@@ -142,7 +148,7 @@ section {
 
 .header {
 	height: 80vh;
-	margin-top: 5rem;			
+	margin-top: 4rem;			
 	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
 		url("images/header.jpg");
 	background-attachment: fixed;
@@ -391,7 +397,7 @@ section {
 	margin-top: 1rem;
 	margin-bottom: 2rem;
 	color: grey;
-	font-family: var(--font-sub-regular);
+	font-family: var();
 	width: 70%;
 }
 
@@ -589,7 +595,7 @@ div.info__main {
 	display: flex;
 	border: 2px solid var(--color-border);
 	background-color: white;
-	justify-content: space-between;
+	justify-content: space-evenly;
 }
 
 .login__text {
@@ -614,30 +620,71 @@ div.info__main {
 .login__form {
 	width: 45%;
 	border-left: 2px solid var(--color-border);
-	padding: 4rem;
+	background-color: white;
 }
 
-.login__form label {
-	margin-bottom: .1rem;
-	font-family: var(--font-sub);
-	color: #444
-}
-.login__form input {
-	border: 2px solid var(--color-border);
-	width: 100%;
-	background-color: var(--color-border-light);
-	padding: 1rem;
-}
-
-.login__form .login__rows {
-	margin: 3rem 0;
-}
-
-.login__form .login__rows:nth-child(2) {
+.login__form .login__bar {
+	height: 10%;
 	display: flex;
-	justify-content: space-between;
+	border: 1px solid var(--color-border);
+	background-color: white;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem;
+	transform: translateY(-100%);
 }
 
+.login__bar a {
+	margin: 0 2rem;
+	color: #999;
+	font-family: var(--font-sub);
+	transition: color ease 0.3s;
+}
+
+.login__bar a.super {
+	color: black;
+}
+
+.login__bar a:hover {
+	color: red;
+}
+
+.login__form .login__contents {
+	display: flex;
+	flex-direction: column;
+}
+
+.login__contents .login__rows {
+	margin: 2rem 2rem;
+} 
+
+.login__contents label{
+	color: var(--color-primary);
+	font-family: var(--font-sub);
+}
+
+.login__contents label span {
+	color: black;
+}
+
+.login__contents input {
+	padding: 1rem;
+	width: 100%;
+	font-size: 1.2rem;
+	font-family: var(--font-sub-regular);
+	border: 1px solid var(--color-border);
+}
+
+.login__contents button {
+	border: 0;
+	padding: 1rem;
+	font-family: var(--font-sub);
+	width: 6rem;
+	height: 3rem;
+	border-radius: 2rem;
+	background-color: var(--color-primary);
+	color: white;
+}
 /*FOR MOBILE DEVICES*/
 
 @media only screen and (max-width: 500px) {
