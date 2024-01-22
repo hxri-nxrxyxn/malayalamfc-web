@@ -32,6 +32,10 @@ html {
  font-size: 10px;
 }
 
+span.urgent {
+ color:  red;
+}
+
 body {
   font-family: 'Inter';
   background: white;
@@ -190,15 +194,22 @@ header * {
 }
 
 form {
-  padding: 5rem 0;
+  border: 2px solid #dfe6e9;
+  border-radius: 20px;
+  padding: 3rem 2rem;
 }
 
 form div {
   display: flex;
+  justify-content: space-between;
+}
+
+form div:nth-child(1) > label, form div:nth-child(3) > label {
+  flex: 1;
 }
 
 form div:nth-child(1) > input, form div:nth-child(3) > input {
-  flex: 1;
+  flex: 3;
 }
 
 form label {
