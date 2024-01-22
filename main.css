@@ -194,9 +194,7 @@ header * {
 }
 
 form {
-  border: 2px solid #dfe6e9;
-  border-radius: 20px;
-  padding: 3rem 2rem;
+  padding: 0rem 0rem;
 }
 
 form div {
@@ -204,13 +202,6 @@ form div {
   justify-content: space-between;
 }
 
-form div:nth-child(1) > label, form div:nth-child(3) > label {
-  flex: 1;
-}
-
-form div:nth-child(1) > input, form div:nth-child(3) > input {
-  flex: 3;
-}
 
 form label {
   font-size: 1.5rem;
@@ -282,7 +273,9 @@ section.coach div.layout__info div > h5  {
   font-size: 1.5rem;
 }
 
-    
+section.coach table input {
+  margin: 0 1rem;
+} 
 
 section.coach form div {
   display: flex;
