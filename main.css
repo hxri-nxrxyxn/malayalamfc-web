@@ -32,6 +32,13 @@ html {
  font-size: 10px;
 }
 
+textarea {
+ border: none;
+ background-color: #dfe6e9;
+ border-radius: 1rem;
+ width: 50%;
+}
+
 span.urgent {
  color:  red;
 }
@@ -290,6 +297,8 @@ section.coach table {
   width: 100%;
   text-align: left;
   font-size: 2rem;
+  border-collapse: separate;
+  border-spacing: 0rem 2rem;
 }
 
 section.coach form div:last-child label {
@@ -305,4 +314,15 @@ section.coach form div select, section.coach form div input {
   background-color: #dfe6e9;
   font-family: 'Inter';
   font-weight: 600;
+}
+
+.nav-buttons {
+  justify-content: space-between;
+  display: flex;
+}
+.nav-buttons input {
+  width: 30%;
+  border-radius: 1rem;
+  padding: 1rem;
+  border: none;
 }

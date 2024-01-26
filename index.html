@@ -21,6 +21,17 @@
 form div:nth-child(1) > input, form div:nth-child(3) > input {
 	flex: 3;
       }
+@media only screen and (min-width: 600px) {
+	.mobi-login {
+		display: none;
+	}
+}
+@media only screen and (max-width: 600px) {
+	.desk-login {
+		display: none !important;
+	}
+}
+
       </style>
       <header>
         <div>
@@ -33,7 +44,7 @@ form div:nth-child(1) > input, form div:nth-child(3) > input {
       <nav>
         <li>
           <a href="#" class="super">Home</a>
-          <a href="#">Contact</a>
+          <a href="contact.html">Contact</a>
         </li>
       </nav>
       <section class="home">
@@ -52,7 +63,7 @@ form div:nth-child(1) > input, form div:nth-child(3) > input {
           young players reach their full potential. We also have a state-of-the-art training facility with
           all the amenities that our players need to succeed</p>
           
-      <div>
+      <div class="desk-login">
 		<h1>Sign In</h1>
 		<div class="form">
 		  <form>
@@ -185,5 +196,38 @@ them overcome challenges.</p>
         </div>
       </section> 
 
+      <section class="mobi-login">
+		<h1>Sign In</h1>
+		<div class="form">
+		  <form>
+		    <div>
+		      <label for="POST">Name</label>
+		      <input type="text" name="" placeholder="Enter your name" required> 
+		    </div>
+		    <br>
+		    <div>
+		      <label for="POST">Password</label>
+		      <input type="password" name="" placeholder="Enter your password" required> 
+		    </div>
+		    <br>
+		    <div>
+		      <label for="POST">Coach</label>
+		      <input type="radio" name="userChoice" value="">
+		      <label for="POST">Student</label>
+		      <input type="radio" name="userChoice" value="">
+		      <label for="POST">Admin</label>
+		      <input type="radio" name="userChoice" value="">
+		    </div>
+		    <br>  
+		    <br>
+		    <div>
+			<a href="./pages/coach.html">
+		      	   <input type="button" name="" value="Login">
+			</a>
+		    </div>
+		  </form>
+		  
+		</div>
+	      </section>
     </body>
 </html>
