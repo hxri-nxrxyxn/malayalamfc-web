@@ -1,0 +1,14 @@
+.hidden {
+	opacity: 0;
+}
+
+.show {
+	opacity: 1;
+	transition: all ease 1s;
+}
+
+.button--main {
+	font-size: 0.7rem;
+	letter-spacing: 0.05rem;
+	font-family: var(--font-sub);
+}

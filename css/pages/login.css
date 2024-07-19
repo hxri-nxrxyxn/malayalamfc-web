@@ -1,0 +1,126 @@
+.login {
+  margin-bottom: 2rem;
+  margin-inline: 2rem;
+  display: flex;
+  border: 2px solid var(--color-border);
+  background-color: white;
+  justify-content: space-evenly;
+}
+
+.login__text {
+  padding: 2rem;
+  margin: 2rem;
+  width: 45%;
+  font-family: var(--font-sub-regular);
+}
+
+.login__text h1 {
+  color: var(--color-primary);
+  font-family: var(--font-sub-regular);
+}
+
+.login__text p {
+  margin-bottom: 5rem;
+}
+
+.login__form {
+  width: 45%;
+  border-left: 2px solid var(--color-border);
+  background-color: white;
+}
+
+.login__form .login__bar {
+  height: 10%;
+  display: flex;
+  border: 1px solid var(--color-border);
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  transform: translateY(-100%);
+}
+
+.login__bar a {
+  margin: 0 2rem;
+  color: #999;
+  font-family: var(--font-sub);
+  transition: color ease 0.3s;
+}
+
+.login__bar a.super {
+  color: black;
+}
+
+.login__bar a:hover {
+  color: red;
+}
+
+.login__form .login__contents {
+  display: flex;
+  flex-direction: column;
+}
+
+.login__contents .login__rows {
+  margin: 2rem 2rem;
+}
+
+.login__contents label {
+  color: var(--color-primary);
+  font-family: var(--font-sub);
+}
+
+.login__contents label span {
+  color: black;
+}
+
+.login__contents input {
+  padding: 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: var(--font-sub-regular);
+  border: 1px solid var(--color-border);
+}
+
+.login__contents button {
+  border: 0;
+  padding: 1rem;
+  font-family: var(--font-sub);
+  width: 6rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: var(--color-primary);
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .login {
+    flex-direction: column;
+    align-items: center;
+    transform: translateY(-5rem);
+  }
+  .login__text {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 4rem;
+  }
+  .login__text h1 {
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 2rem;
+    font-size: 4rem;
+  }
+  .login__text p {
+    padding-top: 2rem;
+    font-size: 2rem;
+  }
+  .login__text img {
+    object-fit: contain;
+  }
+  .login__form {
+    flex: 2;
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=login.css.map */

@@ -1,0 +1,287 @@
+section {
+	top: unset;
+}
+
+.navm {
+	height: 0;
+	visibility: hidden;
+}
+
+.nav {
+	border-bottom: 1px solid var(--color-border);
+	background-color: white;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 999;
+}
+
+.nav__img img {
+	width: 3rem;
+	margin-left: 1rem;
+}
+
+
+.nav__links a {
+	margin: auto 3rem;
+	font-size: 0.7rem;
+	letter-spacing: 0.1rem;
+	font-family: var(--font-demi), FontAwesome;
+}
+
+.nav__links a:hover {
+	color: red;
+}
+
+.nav__current-page {
+	color: red;
+}
+
+.nav__icons a {
+  font-family: FontAwesome;
+  color: #666;
+  padding: 2rem 1.2rem; /*random fix*/
+  border-left: 1px solid var(--color-border);
+}
+
+.nav__icons a:last-child {
+  border-right: 1px solid var(--color-border);
+}
+
+.header {
+	height: 80vh;
+	margin-top: 4rem;			
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)),
+		url("../images/header.jpg");
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+}
+
+.header h1 {
+	margin: auto;
+	font-size: 5rem;
+	color: white;
+	letter-spacing: -0.3rem;
+	font-family: var(--font-bold);
+}
+
+.footer {
+	margin: 0 2rem 5rem 2rem;
+}
+
+.footer__gallery {
+	display: flex;
+}
+
+.footer__gallery div {
+	flex: 1;
+	position: relative;
+	height: 120vh;
+}
+
+.footer__gallery div h1 {
+	text-align: center;
+	color: white;
+	font-family: var(--font-bold);
+	font-size: 5rem;
+	letter-spacing: -0.3rem;
+	transition: all ease 0.5s;
+	position: absolute;
+	z-index: 1;
+	top: 45%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.footer__gallery div:hover h1{
+	color: white;
+}
+
+.footer__gallery div img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	filter: brightness(0.5);
+}
+
+.footer__gallery div:hover img{
+	transition: all ease 0.3s;
+	filter: brightness(0.8);
+}
+
+.footer__links {
+	display: flex;
+	padding: 2rem;
+	align-items: center;
+	background-color: black;
+}
+.footer__links a {
+	flex: 1;
+}
+
+.footer__links img {
+	width: 6rem;
+}
+.footer__links a {
+	color: white;
+	font-family: var(--font-demi);
+	font-size: 0.7rem;
+	letter-spacing: 0.1rem;
+	text-align: center;
+}
+
+.footer__connect {
+	background-color: #0f0f0f;
+	padding: 2rem;
+	display: flex;
+	align-items: center;
+}
+
+.footer__connect div {
+	flex: 1;
+}
+
+.footer__connect--text:last-child {
+	text-align: right;
+}
+
+.footer__connect--icons {
+	text-align: center;
+}
+
+.footer__connect p {
+	font-family: var(--font-sub);
+	font-size: 0.8rem;
+	color: #5f6269;
+}
+
+.footer__connect img {
+	filter: invert(1);
+}
+
+.gallery {
+	margin: 0 5rem;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var(--color-border);
+}
+
+.gallery__row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.gallery__row:not(:first-child) {
+	margin-top: 5rem;
+}
+
+.gallery__column {
+	width: 30%;
+}
+
+.gallery__column img {
+	width: 100%;
+	height: 15rem;
+	object-fit: cover;
+	filter: brightness(0.5);
+	transition: all ease 0.3s;
+}
+
+.gallery__column img:hover {
+	filter: brightness(1);
+	height: 25rem;
+}
+
+@media only screen and (max-width: 600px) {
+	.header {
+		height: 40vh;
+		margin-top: 8vh;
+	}
+	.footer {
+		margin: 0;
+	}
+	.footer__gallery {
+		flex-direction: column;
+		height: 90vh;
+	}
+	.footer__gallery div {
+		background: transparent;
+		height: 30vh;
+	}
+	.footer__gallery div h1 {
+		top: 40%;
+		font-size: 4.5rem;
+	}
+	.nav {
+		display: none;
+	}
+	.nav__links a { 
+		font-size: 1.2rem;
+		margin: auto 0.5rem;
+	}
+	.navm {
+		position: fixed;
+		top: 0;
+		visibility: visible;
+		height: 8vh;
+		background: white;
+		z-index: 999;
+		width: 100%;
+	}
+	.navm__main {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.navm__logo, .navm__icons {
+		width: 30%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.navm__icons {
+		filter: brightness(0) saturate(100%) invert(19%) sepia(89%) saturate(7118%) hue-rotate(0deg) brightness(110%) contrast(104%);
+	}
+	.navm__logo img {
+		height: 8vh;
+		width: auto;
+	}
+	.navm__dropdown {
+		min-height: 5rem;
+		background: white;
+		visibility: hidden;
+	}
+	.navm__dropdown a {
+		display: block;
+		font-family: AGP-Demi;
+		padding: 1rem;
+	}
+	.gallery {
+		padding: 0;
+		border: 0;
+		margin-bottom: 5rem;
+	}
+	.gallery__row {
+		flex-direction: column;
+	}
+	.gallery__row:not(:first-child) {
+		margin-top: 0;
+	}
+	.gallery__column {
+		width: 100%;
+	}
+	.gallery__column img {
+		height: 35rem;
+	}
+	.gallery__column img:hover {
+		height: 40rem;
+	}
+}

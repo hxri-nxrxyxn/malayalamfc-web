@@ -1,0 +1,29 @@
+.news {
+	margin: 5rem;
+}
+.news__stacked {
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+}
+.news__stack {
+	width: 30%;
+	border: 1px solid var(--color-border);
+	flex-direction: column;
+}
+
+
+@media only screen and (max-width: 600px) {
+	.news {
+		margin: 2rem;
+	}
+	.news__stacked {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 0;
+	}
+	.news__stack {
+		width: 100%;
+	}
+}

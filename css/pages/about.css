@@ -1,0 +1,110 @@
+.lang {
+  height: 9rem;
+  margin: 0 5rem;
+  transform: translateY(-50%);
+  background-color: red;
+}
+
+.lang div {
+  min-height: 2rem;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lang div a {
+  font-family: var(--font-sub);
+  margin: 1rem;
+  color: grey;
+  letter-spacing: 1px;
+}
+
+.lang div a.lang--current {
+  color: white;
+}
+
+.info {
+  margin: 0 5rem;
+  margin-top: 5rem;
+  display: flex;
+}
+
+.info div {
+  background-color: white;
+  border: 1px solid var(--color-border);
+  padding: 2rem;
+}
+
+div.info__contents {
+  position: sticky;
+  left: 0;
+  top: 5rem;
+  border-right: none;
+  flex: 1;
+  height: 100%;
+  padding-bottom: 5rem;
+}
+
+div.info__contents h1 {
+  font-family: var(--font-bold);
+}
+
+div.info__contents a {
+  font-family: var(--font-sub-regular);
+  color: grey;
+  display: block;
+  font-size: 0.8rem;
+  margin: 0.8rem 0;
+  letter-spacing: 2px;
+}
+
+div.info__main {
+  flex: 3;
+}
+
+.info__main article {
+  border-bottom: 1px solid var(--color-border);
+  padding: 2rem 0;
+}
+
+.info__main:last-child {
+  padding-bottom: 0;
+  margin-bottom: 5rem;
+}
+
+.info__main article h1 {
+  font-family: var(--font-sub);
+  color: var(--color-primary);
+  font-size: 1.5rem;
+  letter-spacing: -1px;
+  margin-bottom: 1rem;
+}
+
+.info__main article p {
+  font-family: var(--font-sub-regular);
+  line-height: 1.3rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .info {
+    margin: 0 2rem;
+    margin-top: 2rem;
+    box-sizing: border-box;
+  }
+  .info__contents {
+    display: none;
+  }
+  .info__main article:not(:first-child) {
+    padding: 8rem 0;
+  }
+  .info__main article h1 {
+    font-size: 4rem;
+  }
+  .info__main article p {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+/*# sourceMappingURL=about.css.map */
