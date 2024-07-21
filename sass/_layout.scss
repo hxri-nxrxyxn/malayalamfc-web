@@ -200,6 +200,10 @@ section {
 	height: 25rem;
 }
 
+#vision, #about, #target, #values, #purpose, #coaches {
+	scroll-margin-block-start: 110px;
+}
+
 @media only screen and (max-width: 600px) {
 	.header {
 		height: 40vh;

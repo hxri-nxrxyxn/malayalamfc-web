@@ -23,6 +23,10 @@
   margin-bottom: 5rem;
 }
 
+.login__text a {
+  font-family: FontAwesome;
+}
+
 .login__form {
   width: 45%;
   border-left: 2px solid var(--color-border);
